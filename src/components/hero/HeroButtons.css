@@ -1,0 +1,27 @@
+.linkedin_button {
+    background-color: #FDC435;
+    color: black;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.projects_button {
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}

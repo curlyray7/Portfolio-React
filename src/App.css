@@ -4,6 +4,11 @@ body {
     min-height: 100vh;
 }
 
+html{
+    padding: 2em;
+}
+
+
 .App-footer {
     position: absolute;
     bottom: 0;
