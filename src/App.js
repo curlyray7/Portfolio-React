@@ -1,21 +1,27 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/header/Header';
-import Footer from "./components/footer/Footer";
-import Hero from './components/hero/Hero';
-import "./App.css"
+import Footer from './components/footer/Footer';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
 function App() {
   return (
-    <div className="App">
-        <header className="App-header">
-            <Header />
-        </header>
-        <main className="App-body">
-            <Hero/>
+    <BrowserRouter>
+      <div className="min-h-screen flex flex-col bg-white text-black">
+        <Header />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
         </main>
-        <footer className="App-footer">
-            <Footer />
-        </footer>
-    </div>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
