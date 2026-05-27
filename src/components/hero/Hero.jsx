@@ -1,22 +1,36 @@
 import HeroButtons from './HeroButtons';
-import "./Hero.css"
-
 
 const Hero = () => {
-    return (
-        <div className="hero">
-            <div className="hero_container">
-                <h3 className="hero_job">STREAMER TWITCH</h3>
-                <h1 className="hero_title">Hello,  my <br/>name  is<br/> Asterion</h1>
-                <p className="hero_description">Salut moi c'est Asterion ! Tu veux qu'il te fasse quoi le minautore ?</p>
-                <HeroButtons/>
-            </div>
-            <div className="hero_image">
-                <img src="/assets/yellow-bg.png" className="yellow_bg"  alt="yellow bg" />
-                <img src="https://yt3.googleusercontent.com/OcaRfoTCWk2O4DmXjFA8Sct8hwTzMpkGxC8OwIssmB5zGjiSO6CsD0Ru0NYzlzdaGJZNLGhl=s900-c-k-c0x00ffffff-no-rj" alt="asterion" width={300}/>
-            </div>
-        </div>
-    )
-}
+  return (
+    <section className="flex flex-row min-h-[78vh] overflow-hidden">
+      {/* Left — text content */}
+      <div className="flex flex-col px-12 py-16 w-1/2 gap-4">
+        <p className="text-primary font-semibold tracking-widest text-xl uppercase">
+          ETUDIANT EFREI
+        </p>
+        <h1 className="text-6xl font-bold leading-tight">
+          Hello,my name<br/> is Rayane
+        </h1>
+        <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
+          Etudiant en 1ere année LSI à EFREI, en alternance chez BETCLIC en tant que développeur Android
+        </p>
+        <HeroButtons />
+      </div>
+
+      <div>
+        <img
+            src="/assets/yellow-bg.png"
+            alt=""
+            className="absolute top-20 right-0 w-1/2"
+        />
+        <img
+            src="/assets/Rayane.png"
+            alt="Rayane"
+            className="absolute top-20 -right-20 w-1/2"
+        />
+      </div>
+    </section>
+  );
+};
 
 export default Hero;
